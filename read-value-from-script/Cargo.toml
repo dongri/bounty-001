@@ -1,7 +1,7 @@
 [package]
-name = "script-leveldb"
+name = "read-value-from-script"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-leveldb = "0.8.0"
+rs-leveldb = "0.1.5"

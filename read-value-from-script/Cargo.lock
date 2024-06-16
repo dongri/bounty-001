@@ -18,12 +18,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "db-key"
-version = "0.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b72465f46d518f6015d9cf07f7f3013a95dd6b9c2747c3d65ae0cce43929d14f"
-
-[[package]]
 name = "ffi-opaque"
 version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -34,17 +28,6 @@ name = "hermit-abi"
 version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024"
-
-[[package]]
-name = "leveldb"
-version = "0.8.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32651baaaa5596b3a6e0bee625e73fd0334c167db0ea5ac68750ef9a629a2d6a"
-dependencies = [
- "db-key",
- "leveldb-sys",
- "libc",
-]
 
 [[package]]
 name = "leveldb-sys"
@@ -75,8 +58,18 @@ dependencies = [
 ]
 
 [[package]]
-name = "script-leveldb"
+name = "read-value-from-script"
 version = "0.1.0"
 dependencies = [
- "leveldb",
+ "rs-leveldb",
+]
+
+[[package]]
+name = "rs-leveldb"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d45bd5782e78f9c4dd1e232c3439c2db9ec4c73075e5dd6fb65fb7daae33812d"
+dependencies = [
+ "leveldb-sys",
+ "libc",
 ]
